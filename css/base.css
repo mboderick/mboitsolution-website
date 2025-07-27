@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding-top: 50px;
+  position: relative;
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.main {
+  position: relative;
+  z-index: 1;
+}

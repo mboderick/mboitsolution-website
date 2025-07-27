@@ -1,0 +1,128 @@
+.hero-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  align-items: center;
+  padding: 30px 100px;
+  color: white;
+}
+
+.hero-section {
+  flex: 1;
+  box-sizing: border-box;
+  margin-top: 80px;
+}
+
+.h1-hero {
+  display: block;
+  font-family: monospace;
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+.hero-desc {
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.cta-btn {
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+  border-style: solid;
+  border-color: yellow;
+  border-radius: 50px;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.cta-btn:hover {
+  color: yellow;
+  background-color: rgb(8, 8, 128);
+  border-color: white;
+}
+
+.arrow-link {
+  position: relative;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.arrow-link::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -25%;
+  margin-left: 10px;
+  transform: translateY(-50%);
+  border: solid transparent;
+  border-width: 6px;
+  border-left-color: #fff; /* arrow color */
+  animation: arrow-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes arrow-pulse {
+  0% {
+    transform: translateY(-50%) translateX(0);
+  }
+  50% {
+    transform: translateY(-50%) translateX(10px);
+  }
+  100% {
+    transform: translateY(-50%) translateX(0);
+  }
+}
+
+#what-we-do {
+  margin-left: 35%;
+}
+
+dl {
+  margin: 1em 0;
+}
+
+dt {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+dd {
+  font-size: 1.1rem;
+  margin-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.hero-container2 {
+  display: flex;
+  flex-direction: row;
+  padding: 30px 120px;
+  gap: 30px;
+  background-color: whitesmoke;
+}
+
+.section-container2 {
+  flex: 1;
+  background-color: rgb(236, 236, 236);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.background-blur {
+  background-image: url("../images/Background1.webp");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(2px);
+  /*opacity: 9;*/
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: darken;
+  z-index: -1;
+}
