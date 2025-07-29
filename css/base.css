@@ -6,14 +6,26 @@
   box-sizing: border-box;
 }
 
-html,
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding-top: var(--header-height, 120px);
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* html,
 body {
   padding-top: 50px;
   position: relative;
   font-family: "Inter", sans-serif;
   line-height: 1.6;
   min-height: 100vh;
-}
+} */
 
 h1,
 h2,
