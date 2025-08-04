@@ -1,0 +1,100 @@
+.about-us-container {
+  position: relative;
+  padding: 120px 150px;
+  /* height: auto; */
+  font-size: 1.2rem;
+  color: white;
+  overflow: hidden;
+}
+
+.about-us-main-title {
+  border-bottom: 1px solid rgb(255, 255, 0);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.about-us-main-title {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-weight: 700px;
+  line-height: 1.5;
+}
+.about-section {
+  /* border: 2px dashed red; */
+  margin-bottom: 40px;
+}
+
+.about-title {
+  color: white;
+  border-bottom: 1px solid rgb(255, 255, 0);
+  line-height: 1.5;
+}
+
+.personal-detail {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 200px;
+  row-gap: 50px;
+  justify-content: space-between;
+}
+
+.profile-picture {
+  width: 160px;
+  border-radius: 100px;
+}
+
+/* pseudo class is used to blur the background image and other effect the text on top of it is applied */
+.about-us-container::before {
+  content: ""; /*it creates an empty pseudo element*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../images/about-us-background.webp") no-repeat center/cover;
+  width: 100%;
+  height: 100%;
+  filter: blur(1.5px);
+  transform: scale(1.05);
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  z-index: -2;
+}
+
+/* Dark overlay on top of blurred background */
+.about-us-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* black with 40% opacity */
+  z-index: -1; /* between background and text */
+}
+
+@media only screen and (max-width: 400px) {
+  .about-us-container {
+    display: flex;
+    flex-direction: column;
+    /* padding-top: 100px; */
+    padding-bottom: 0;
+    padding-left: 22px;
+    padding-right: 22px;
+    font-size: 1.2rem;
+    color: white;
+    overflow: hidden;
+  }
+  .personal-detail {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    column-gap: 100px;
+    row-gap: 20px;
+  }
+  .personal-detail-photo {
+    align-items: center;
+    text-align: center;
+  }
+  .about-section {
+    margin-bottom: 30px;
+  }
+}

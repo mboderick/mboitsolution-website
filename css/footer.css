@@ -1,0 +1,26 @@
+footer {
+  background-color: rgb(8, 8, 128);
+  padding: 20px;
+}
+
+.footer-container {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  color: #fffefe;
+  line-height: 1.8;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 400px) {
+  .footer-container {
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 0.5rem;
+    color: #fffefe;
+    line-height: 2;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,121 @@
+.header-container img {
+  width: 160px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 180px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  flex-wrap: wrap;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid rgb(216, 211, 211);
+  z-index: 100;
+}
+
+.site-nav ul {
+  display: flex;
+  gap: 3rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: rgb(8, 8, 128);
+}
+
+.site-nav a {
+  text-decoration: none;
+  padding: 4px; /* baseline padding for consistent layout */
+  transition: all 0.3s ease;
+}
+
+.site-nav a:hover {
+  color: yellow;
+  border-radius: 10px;
+  background-color: rgb(8, 8, 128);
+  box-shadow: 2px 5px 10px rgb(190, 185, 185);
+}
+
+/* highlight the current page */
+.site-nav a[aria-current="page"] {
+  color: white;
+  background-color: rgb(8, 8, 128);
+  border-radius: 8px;
+  padding: 4px;
+}
+
+/* Hamburger Menu (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 400px) {
+  .header-container img {
+    width: 140px;
+  }
+  .header-container {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse; /*swaps the logo to the right and hamburger to the left */
+    /* align-items: center; */
+    justify-content: space-between;
+    padding: 5px 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    flex-wrap: wrap;
+  }
+  .header-container img {
+    order: 2; /* ensure logo stays on the right */
+  }
+
+  .menu-toggle {
+    order: 1; /* hamburger on the left */
+  }
+  .menu-toggle img {
+    width: 40px;
+  }
+
+  .menu-toggle {
+    display: inline-block;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .site-nav {
+    display: none;
+    flex-direction: column;
+  }
+  .site-nav.active {
+    display: flex; /* show when toggled */
+  }
+  .site-nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    gap: 1rem;
+    margin: 0px;
+    padding-right: 100px;
+    background-color: white;
+  }
+
+  .site-nav a {
+    font-size: 1rem;
+    display: block;
+    padding: 10px;
+  }
+
+  
+}

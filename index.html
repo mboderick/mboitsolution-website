@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="MBO Freelance: Web and Desktop Software Developers – We build powerful digital solutions in Python, C++, Java, and more."
+    />
+    <title>MBO Freelance | Web & Desktop Software Developers</title>
+
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png" />
+    <link rel="icon" href="images/favicon2.ico" type="image/x-icon" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="home-page">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="header-container">
+        <a href="index.html">
+          <img
+            src="images/Logo.svg"
+            alt="MBO Freelance Logo"
+            class="logo-header"
+            loading="lazy"
+          />
+        </a>
+
+        <nav class="site-nav" id="site-nav">
+          <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+          </ul>
+        </nav>
+
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          aria-label="Toggle navigation"
+        >
+          <img src="images/menu.png" alt="Menu Icon" id="menu-toggle-icon" />
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+      <!-- primary Section -->
+      <section class="hero-container">
+        <div class="hero-content">
+          <h1>We Build Powerful Web & Desktop Applications</h1>
+          <p>
+            Freelance software developers specializing in Python, JavaScript,
+            Java, C++, C# and database systems.
+          </p>
+          <!-- call to action button arrow-link class for -> point decortion -->
+          <a href="contact.html" class="cta-btn arrow-link">Get in Touch</a>
+        </div>
+
+        <section class="services-preview">
+          <h2>What We Do</h2>
+          <dl>
+            <dt>Web Development</dt>
+            <dd>
+              <p>
+                We build responsive and user-friendly websites using HTML, CSS,
+                JavaScript, Django, and Flask.
+              </p>
+            </dd>
+
+            <dt>Desktop Development</dt>
+            <dd>
+              <p>
+                Cross-platform desktop software built with Python
+                (PyQt/Tkinter), C++, Java, and C#.
+              </p>
+            </dd>
+
+            <dt>Database Systems</dt>
+            <dd>
+              <p>
+                We design, implement, and manage relational databases using
+                MySQL, PostgreSQL, SQL Server, and Oracle.
+              </p>
+            </dd>
+          </dl>
+        </section>
+      </section>
+
+      <!-- Secondary Section -->
+      <section class="hero-secondary">
+        <article class="content-block">
+          <h2>Who We Are</h2>
+          <p>
+            We are graduates in IT and Informatics Science from UNISA with a
+            passion for software development.
+          </p>
+          <a href="about.html">Learn more about us → </a>
+        </article>
+
+        <article class="projects-preview">
+          <h2>Recent Projects</h2>
+          <ul>
+            <li>✔ School Management System</li>
+            <li>✔ Restaurant Ordering App</li>
+            <li>✔ Banking App</li>
+            <li>✔ Personal Portfolio Site</li>
+          </ul>
+          <a href="projects.html">View all projects →</a>
+        </article>
+
+        <aside class="contact-cta">
+          <h2>Need a custom solution?</h2>
+          <p>Let’s discuss your project and how we can help.</p>
+          <a href="contact.html">Contact Us →</a>
+        </aside>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <p>&copy; 2025 MBO Freelance team. All rights reserved.</p>
+        <p>Built with ❤️ by Informatics and IT graduates from UNISA</p>
+      </div>
+    </footer>
+
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const siteNav = document.getElementById("site-nav");
+      const menuIcon = document.getElementById("menu-toggle-icon");
+
+      menuToggle.addEventListener("click", () => {
+        siteNav.classList.toggle("active");
+        menuToggle.classList.toggle("open");
+
+        if (siteNav.classList.contains("active")) {
+          menuIcon.src = "images/close.png";
+          menuIcon.alt = "Close Menu";
+        } else {
+          menuIcon.src = "images/menu.png";
+          menuIcon.alt = "Menu Icon";
+        }
+      });
+    </script>
+  </body>
+</html>
