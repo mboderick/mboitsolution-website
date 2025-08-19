@@ -1,10 +1,11 @@
 .about-us-container {
   position: relative;
-  padding: 120px 150px;
-  /* height: auto; */
+  padding: 50px 120px;
   font-size: 1.2rem;
   color: white;
   overflow: hidden;
+  background: rgb(66, 66, 66) url("../images/white-wall.png");
+  z-index: -1;
 }
 
 .about-us-main-title {
@@ -28,6 +29,7 @@
   color: white;
   border-bottom: 1px solid rgb(255, 255, 0);
   line-height: 1.5;
+  margin-bottom: 30px;
 }
 
 .personal-detail {
@@ -43,39 +45,10 @@
   border-radius: 100px;
 }
 
-/* pseudo class is used to blur the background image and other effect the text on top of it is applied */
-.about-us-container::before {
-  content: ""; /*it creates an empty pseudo element*/
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: url("../images/about-us-background.webp") no-repeat center/cover;
-  width: 100%;
-  height: 100%;
-  filter: blur(1.5px);
-  transform: scale(1.05);
-  background-color: rgba(0, 0, 0, 0.5);
-  background-blend-mode: darken;
-  z-index: -2;
-}
-
-/* Dark overlay on top of blurred background */
-.about-us-container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* black with 40% opacity */
-  z-index: -1; /* between background and text */
-}
-
 @media only screen and (max-width: 400px) {
   .about-us-container {
     display: flex;
     flex-direction: column;
-    /* padding-top: 100px; */
     padding-bottom: 0;
     padding-left: 22px;
     padding-right: 22px;

@@ -7,14 +7,27 @@
 }
 
 html {
-  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
   scroll-behavior: smooth;
 }
 
+p {
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+
+a {
+  /* color: #1976d2; */
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 body {
-  font-family: "Inter", sans-serif;
-  line-height: 1.6;
-  min-height: 100vh;
+  margin: 0;
+  padding-top: 100px;
 }
 
 h1,
@@ -23,7 +36,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 ul {
@@ -38,6 +51,7 @@ main {
 
 @media only screen and (max-width: 400px) {
   body {
+    padding-top: 80px;
     background-color: white;
   }
 }
